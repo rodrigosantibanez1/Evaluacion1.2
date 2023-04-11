@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url=("/imagenes/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg");
+    background-image: url=("vangoh.jpg");
 }
 
 
@@ -36,6 +36,12 @@ button:hover {
   padding: 10px 18px;
   background-color: #f44336;
 }
+
+.sign_in {
+    width: auto;
+    padding: 10px 18px;
+    background-color: rgb(3, 255, 3);
+  }
 
 /* Center the image and position the close button */
 .imgcontainer {
