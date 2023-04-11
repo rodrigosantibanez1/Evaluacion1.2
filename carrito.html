@@ -1,0 +1,289 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="css/background.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/productos.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script type="text/javascript" src="js/tail.js"></script>
+        <script src="https://kit.fontawesome.com/5d7952c473.js" crossorigin="anonymous"></script>
+
+      </head>
+
+
+        <body class="back">
+<!-- NAVBAR -->
+<div class="fixed-top">
+<nav class="navbar navbar-dark fixed-top" style="background-color: black;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="logo/logoSoloNegativo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+      Grupo cero°
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: black;">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="color: #79F2E6;">Menu</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+</nav>
+</div>
+
+<!-- FIN NAVBAR -->
+<!-- CARRITO -->
+
+<div class="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+    <!--
+      Background backdrop, show/hide based on slide-over state.
+  
+      Entering: "ease-in-out duration-500"
+        From: "opacity-0"
+        To: "opacity-100"
+      Leaving: "ease-in-out duration-500"
+        From: "opacity-100"
+        To: "opacity-0"
+    -->
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+  
+    <div class="fixed inset-0 overflow-hidden">
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+          <!--
+            Slide-over panel, show/hide based on slide-over state.
+  
+            Entering: "transform transition ease-in-out duration-500 sm:duration-700"
+              From: "translate-x-full"
+              To: "translate-x-0"
+            Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
+              From: "translate-x-0"
+              To: "translate-x-full"
+          -->
+          <div class="pointer-events-auto w-screen max-w-md">
+            <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+              <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                <div class="flex items-start justify-between">
+                  <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">Carrrito de compras</h2>
+                  <div class="ml-3 flex h-7 items-center">
+                    <button type="button" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
+                      <span class="sr-only">Cerrar panel</span>
+                      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+  
+                <div class="mt-8">
+                  <div class="flow-root">
+                    <ul role="list" class="-my-6 divide-y divide-gray-200">
+                      <li class="flex py-6">
+                        <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                          <img src="https://www.jotdown.es/wp-content/uploads/2015/04/20.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center">
+                        </div>
+  
+                        <div class="ml-4 flex flex-1 flex-col">
+                          <div>
+                            <div class="flex justify-between text-base font-medium text-gray-900">
+                              <h3>
+                                <a href="#">La joven de la perla</a>
+                              </h3>
+                              <p class="ml-4">$600.000 clp.</p>
+                            </div>
+                            <p class="mt-1 text-sm text-gray-500">Cuadro</p>
+                          </div>
+                          <div class="flex flex-1 items-end justify-between text-sm">
+                            <p class="text-gray-500">Qty 1</p>
+  
+                            <div class="flex">
+                              <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- More products... -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
+                <div class="flex justify-between text-base font-medium text-gray-900">
+                  <p>Total</p>
+                  <p>$600.000 clp</p>
+                </div>
+                <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                <div class="mt-6">
+                  <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
+                </div>
+                <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
+                  <p>
+                    or
+                    <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">
+                      Continue Shopping
+                      <span aria-hidden="true"> &rarr;</span>
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- FIN CARRITO -->
+<!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>1010 Avenue, sw 54321, chandigarh</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>9876543210 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="logo/LogoHorizontalNegativo.png" class="img-fluid" alt="logo"></a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                            elit,Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Expert Team</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Latest News</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- FIN FOOTER-->
+        </body>
+</html>
