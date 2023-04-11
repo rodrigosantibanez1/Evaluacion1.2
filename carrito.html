@@ -11,163 +11,288 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <script type="text/javascript" src="js/tail.js"></script>
         <script src="https://kit.fontawesome.com/5d7952c473.js" crossorigin="anonymous"></script>
-
       </head>
 
 
-        <body class="back">
+        <body class="back2">
 <!-- NAVBAR -->
 <div class="fixed-top">
-<nav class="navbar navbar-dark fixed-top" style="background-color: black;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="logo/logoSoloNegativo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-      Grupo cero°
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: black;">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="color: #79F2E6;">Menu</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-        </form>
+  <nav class="navbar navbar-dark fixed-top" style="background-color: black;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">
+        <img src="logo/logoSoloNegativo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        Grupo cero°
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: black;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel" style="color: #79F2E6;">Menu</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="carrito.html">Carrito</a>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
       </div>
     </div>
+    </div>
+  </nav>
   </div>
-  </div>
-</nav>
-</div>
 
 <!-- FIN NAVBAR -->
 <!-- CARRITO -->
+<section style="padding-top: 100px; padding-bottom: 100px;">
+  <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <header class="text-center">
+        <h1 class="text-xl font-bold text-gray-900 sm:text-3xl">Your Cart</h1>
+      </header>
 
-<div class="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
-    <!--
-      Background backdrop, show/hide based on slide-over state.
+      <div class="mt-8">
+        <ul class="space-y-4">
+          <li class="flex items-center gap-4">
+            <img
+              src="https://www.jotdown.es/wp-content/uploads/2015/04/20.jpg"
+              alt=""
+              class="h-16 w-16 rounded object-cover"
+            />
+
+            <div>
+              <h3 class="text-sm text-gray-900">La joven de la perla</h3>
+
+              <dl class="mt-0.5 space-y-px text-[10px] text-gray-600">
+                <div>
+                  <dt class="inline">Colecci&oacute;n: </dt>
+                  <dd class="inline">Cuadros</dd>
+                </div>
+
+                <div>
+                  <dt class="inline">Valor:</dt>
+                  <dd class="inline">$600.000 clp.</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="flex flex-1 items-center justify-end gap-2">
+              <form>
+                <label for="Line1Qty" class="sr-only"> Cantidad </label>
+
+                <input
+                  type="number"
+                  min="1"
+                  value="1"
+                  id="Line1Qty"
+                  class="h-8 w-12 rounded border-gray-200 bg-gray-50 p-0 text-center text-xs text-gray-600 [-moz-appearance:_textfield] focus:outline-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+                />
+              </form>
+
+              <button class="text-gray-600 transition hover:text-red-600">
+                <span class="sr-only">Remover del carrito</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-4 w-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                  />
+                </svg>
+              </button>
+            </div>
+          </li>
+
+          <li class="flex items-center gap-4">
+            <img
+              src="https://www.todocuadros.es/media/catalog/product/cache/1/small_image/450x450/040ec09b1e35df139433887a97daa66f/p/i/picasso-nino-paloma.jpg"
+              alt=""
+              class="h-16 w-16 rounded object-cover"
+            />
+
+            <div>
+              <h3 class="text-sm text-gray-900">Niño come palomas</h3>
+
+              <dl class="mt-0.5 space-y-px text-[10px] text-gray-600">
+                <div>
+                  <div>
+                    <dt class="inline">Colecci&oacute;n: </dt>
+                    <dd class="inline">Cuadros</dd>
+                  </div>
   
-      Entering: "ease-in-out duration-500"
-        From: "opacity-0"
-        To: "opacity-100"
-      Leaving: "ease-in-out duration-500"
-        From: "opacity-100"
-        To: "opacity-0"
-    -->
-    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-  
-    <div class="fixed inset-0 overflow-hidden">
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-          <!--
-            Slide-over panel, show/hide based on slide-over state.
-  
-            Entering: "transform transition ease-in-out duration-500 sm:duration-700"
-              From: "translate-x-full"
-              To: "translate-x-0"
-            Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
-              From: "translate-x-0"
-              To: "translate-x-full"
-          -->
-          <div class="pointer-events-auto w-screen max-w-md">
-            <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
-              <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-                <div class="flex items-start justify-between">
-                  <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">Carrrito de compras</h2>
-                  <div class="ml-3 flex h-7 items-center">
-                    <button type="button" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
-                      <span class="sr-only">Cerrar panel</span>
-                      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    </button>
+                  <div>
+                    <dt class="inline">Valor:</dt>
+                    <dd class="inline">$400.000 clp.</dd>
                   </div>
                 </div>
-  
-                <div class="mt-8">
-                  <div class="flow-root">
-                    <ul role="list" class="-my-6 divide-y divide-gray-200">
-                      <li class="flex py-6">
-                        <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                          <img src="https://www.jotdown.es/wp-content/uploads/2015/04/20.jpg" alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." class="h-full w-full object-cover object-center">
-                        </div>
-  
-                        <div class="ml-4 flex flex-1 flex-col">
-                          <div>
-                            <div class="flex justify-between text-base font-medium text-gray-900">
-                              <h3>
-                                <a href="#">La joven de la perla</a>
-                              </h3>
-                              <p class="ml-4">$600.000 clp.</p>
-                            </div>
-                            <p class="mt-1 text-sm text-gray-500">Cuadro</p>
-                          </div>
-                          <div class="flex flex-1 items-end justify-between text-sm">
-                            <p class="text-gray-500">Qty 1</p>
-  
-                            <div class="flex">
-                              <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <!-- More products... -->
-                    </ul>
-                  </div>
+              </dl>
+            </div>
+
+            <div class="flex flex-1 items-center justify-end gap-2">
+              <form>
+                <label for="Line2Qty" class="sr-only"> Cantidad </label>
+
+                <input
+                  type="number"
+                  min="1"
+                  value="1"
+                  id="Line2Qty"
+                  class="h-8 w-12 rounded border-gray-200 bg-gray-50 p-0 text-center text-xs text-gray-600 [-moz-appearance:_textfield] focus:outline-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+                />
+              </form>
+
+              <button class="text-gray-600 transition hover:text-red-600">
+                <span class="sr-only">Remover del carrito</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-4 w-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                  />
+                </svg>
+              </button>
+            </div>
+          </li>
+
+          <li class="flex items-center gap-4">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg"
+              alt=""
+              class="h-16 w-16 rounded object-cover"
+            />
+
+            <div>
+              <h3 class="text-sm text-gray-900"> La noche estrellada </h3>
+
+              <dl class="mt-0.5 space-y-px text-[10px] text-gray-600">
+                <div>
+                  <dt class="inline">Colecci&oacute;n: </dt>
+                  <dd class="inline">Cuadros</dd>
                 </div>
+
+                <div>
+                  <dt class="inline">Valor:</dt>
+                  <dd class="inline">$380.000 clp.</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="flex flex-1 items-center justify-end gap-2">
+              <form>
+                <label for="Line3Qty" class="sr-only"> cantidad </label>
+
+                <input
+                  type="number"
+                  min="1"
+                  value="1"
+                  id="Line3Qty"
+                  class="h-8 w-12 rounded border-gray-200 bg-gray-50 p-0 text-center text-xs text-gray-600 [-moz-appearance:_textfield] focus:outline-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+                />
+              </form>
+
+              <button class="text-gray-600 transition hover:text-red-600">
+                <span class="sr-only">Remover del carrito</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-4 w-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                  />
+                </svg>
+              </button>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-8 flex justify-end border-t border-gray-100 pt-8">
+          <div class="w-screen max-w-lg space-y-4">
+            <dl class="space-y-0.5 text-sm text-gray-700">
+              <div class="flex justify-between">
+                <dt>Subtotal</dt>
+                <dd>$1.830.000</dd>
               </div>
-  
-              <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
-                <div class="flex justify-between text-base font-medium text-gray-900">
-                  <p>Total</p>
-                  <p>$600.000 clp</p>
-                </div>
-                <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
-                <div class="mt-6">
-                  <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Checkout</a>
-                </div>
-                <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
-                  <p>
-                    or
-                    <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500">
-                      Continue Shopping
-                      <span aria-hidden="true"> &rarr;</span>
-                    </button>
-                  </p>
-                </div>
+
+              <div class="flex justify-between">
+                <dt>Descuebnto</dt>
+                <dd>-$200.000</dd>
               </div>
+
+              <div class="flex justify-between !text-base font-medium">
+                <dt>Total</dt>
+                <dd>$1.180.000</dd>
+              </div>
+            </dl>
+
+            <div class="flex justify-end">
+              <span
+                class="inline-flex items-center justify-center rounded-full bg-indigo-100 px-2.5 py-0.5 text-indigo-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="-ml-1 mr-1.5 h-4 w-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z"
+                  />
+                </svg>
+
+                <p class="whitespace-nowrap text-xs">2 descuentos aplicados</p>
+              </span>
+            </div>
+
+            <div class="flex justify-end">
+              <a
+                href="#"
+                class="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
+              >
+                Pagar
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</section>
+
 
 <!-- FIN CARRITO -->
 <!-- FOOTER -->
