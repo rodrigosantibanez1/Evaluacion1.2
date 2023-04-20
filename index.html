@@ -29,10 +29,11 @@
             <img src="logo/logoSolo.png" alt="Logo" width="25%" height="25%" class="d-inline-block align-text-top">
             <h2>Ground Zero <br> Log-in </h2>
             <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+            <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">sign-in</button>
           </div>
-          
 
-          
+
+
 
           <div id="id01" class="modal">
 
@@ -58,14 +59,13 @@
                 <div class="container text-center">
                   <div class="row">
                     <div class="col">
+                      
+                    </div>
+                    <div class="col">
                       <button type="button" onclick="document.getElementById('id01').style.display='none'"
                         class="cancelbtn">Cancel</button>
                     </div>
                     <div class="col">
-                    </div>
-                    <div class="col">
-                      <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                        class="sign_in">sign-in</button>
                     </div>
                   </div>
                 </div>
@@ -76,44 +76,65 @@
             </form>
           </div>
           <div id="id02" class="modal">
-            <form class="modal-content animate">
-              <div class="container">
-                <label for="uname"><b>name</b></label>
-                <input type="text" placeholder="Enter name" name="uname" required>
-                <label for="uname"><b>Last name</b></label>
-                <input type="text" placeholder="Enter last name" name="uname" required>
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit" onclick="location.href='home.html';">Login</button>
-                <label>
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+            <form class="row g-3" id="form-sn">
+              <div class="col-md-4">
+                <label for="validationDefault01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationDefault01" required>
               </div>
-
-              <div class="container" style="background-color:#f1f1f1">
+              <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationDefault02" required>
+              </div>
+              <div class="col-md-4">
+                <label for="validationDefaultUsername" class="form-label">Username</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                  <input type="text" class="form-control" id="validationDefaultUsername"
+                    aria-describedby="inputGroupPrepend2" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationDefault03" class="form-label">City</label>
+                <input type="text" class="form-control" id="validationDefault03" required>
+              </div>
+              <div class="col-md-3">
+                <label for="validationDefault04" class="form-label">State</label>
+                <select class="form-select" id="validationDefault04" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="validationDefault05" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="validationDefault05" required>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                  <label class="form-check-label" for="invalidCheck2">
+                    Agree to terms and conditions
+                  </label>
+                </div>
+              </div>
+              <div class="container text-center">
                 <div class="container text-center">
                   <div class="row">
                     <div class="col">
-                      <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    </div>
+                    <div class="col">
+                      <button class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+                    <div class="col">
+                      <button type="button" onclick="document.getElementById('id02').style.display='none'"
                         class="cancelbtn">Cancel</button>
                     </div>
-                    <div class="col">
-                    </div>
-                    <div class="col">
-                      <button type="button" onclick="document.getElementById('id0').style.display='none'"
-                        class="sign_in">sign-in</button>
-                    </div>
+                    <div class="col"></div>
                   </div>
                 </div>
-
-
-                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+              <div class="col-12">
               </div>
             </form>
-
           </div>
         </div>
 
