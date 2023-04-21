@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro usuario</title>
+
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+<form action="" id="formulario">
+    <div>
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre">
+    </div>
+    <div>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido">
+    </div>
+    <div>
+        <label for="txt_rut">Rut</label>
+        <input type="text" class="form-control" placeholder="11111111-1" aria-describedby="sizing-addon1" id="txt_rut">
+    </div>   
+    <input type="submit" value="Enviar"  id="btnvalida" class="btn btn-default">
+    <p id="msgerror"></p>
+</form>
+
+<div id="error"></div>
+
+<!-- SCRIPTS -->
+<script src="js/registrousuario.js"></script>
+<!-- FIN SCRIPTS -->
+</body>
+</html>
