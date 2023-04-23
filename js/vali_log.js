@@ -30,6 +30,9 @@ function valiLog(){
         error_pass.style.color = "red";
         error_pass.innerHTML = ("(la contraseña debe ser completada)");
         return false;
+    } else if (pass.value.length < 8) {
+        error_pass.style.color = "red";
+        error_pass.innerHTML = '(La contraseña debe tener al menos 8 caracteres)';
     }
     else{
         error_uname.innerHTML =("");
