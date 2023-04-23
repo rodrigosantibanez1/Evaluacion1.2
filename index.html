@@ -91,16 +91,16 @@
               <div class="container">
                 <h2>Registro</h2>
                 <form>
-                  <label for="nombre">Nombre:</label>
+                  <label for="nombre">Nombre:</label><label for="nombre" id="error_name"></label>
                   <input type="text" name="nombre" id="nombre" class="form-control">
             
-                  <label for="correo">Correo electrónico:</label>
+                  <label for="correo">Correo electrónico:</label><label for="correo" id="error_correo"></label>
                   <input type="email" name="correo" id="correo" class="form-control">
             
-                  <label for="password">Contraseña:</label>
+                  <label for="password">Contraseña:</label><label for="password" id="error_password"></label>
                   <input type="password" name="password" id="password" class="form-control">
             
-                  <button type="submit" class="send">Registrarse</button>
+                  <button type="" class="send" onclick="return valiRegister();">Registrarse</button>
                   <div class="container" style="background-color:#f1f1f1">
                     <div class="container text-center">
                       <div class="row">
@@ -141,6 +141,7 @@
     integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
     crossorigin="anonymous"></script>
   <script src="js/vali_log.js"></script>
+  <script src="js/vali_register.js"></script>
 </body>
 
 </html>
