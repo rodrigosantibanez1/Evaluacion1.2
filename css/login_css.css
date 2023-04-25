@@ -84,7 +84,7 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 60%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -122,6 +122,22 @@ span.psw {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(255, 255, 255); /* Fallback color */
   background-color: rgb(255, 255, 255); /* Black w/ opacity */
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  select {
+    font-size: 14px;
+  }
 }
 
 
