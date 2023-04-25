@@ -1,13 +1,16 @@
-function valiRegister(){
+function valiRegister() {
     var nombre = document.getElementById('nombre');
     var pass = document.getElementById('password');
     var correo = document.getElementById('correo');
     var error_nombre = document.getElementById('error_name');
     var error_pass = document.getElementById('error_password');
     var error_correo = document.getElementById('error_correo');
+    var numeroInput = document.getElementById("numero");
+    var errorNumero = document.getElementById("error_numero");
     error_correo.style.color = 'red';
     error_pass.style.color = 'red';
     error_nombre.style.color = 'red';
+    errorNumero.style.color = 'red';
     var campos_vacios = [];
 
     if (nombre.value === '') {
@@ -37,10 +40,19 @@ function valiRegister(){
         error_correo.innerHTML = '';
     }
 
+    if (numeroInput.value === '') {
+        campos_vacios.push('Numero');
+        errorNumero.innerHTML = "(El campo no puede estar vacío)";
+    } else if (numero.length !== 8) {
+        errorNumero.innerHTML = "(El número debe tener 8 caracteres)";
+    } else {
+        errorNumero.innerHTML = "";
+    }
     if (campos_vacios.length > 0) {
         alert('Los siguientes campos son obligatorios: ' + campos_vacios.join(', '));
         return false;
     } else {
         return true;
     }
+
 }
