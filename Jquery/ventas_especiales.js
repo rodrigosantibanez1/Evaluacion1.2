@@ -2,8 +2,11 @@ $(document).ready(function (){
     $.get("https://fakestoreapi.com/products",
         function(data){
             $.each(data,function(i,item){
-                $("#ventas_es").append("<tr><td>"+item.id+"</td><td>"+item.title+
-                                        "</td><td>"+item.price+"</td><td><img src='"+item.image+"'></td></tr>")
+                $("#ventas_es").append("<div class='card'><img src='"+item.image+"'>"+
+                                            "<div class='container'><p>"+
+                                            item.id+"-. <b>Nombre:</b> "+item.title+"</p>"+
+                                            "<p><b>Precio:</b> "+item.price+
+                                            "</p></div></div>")
             })
         });
 });
