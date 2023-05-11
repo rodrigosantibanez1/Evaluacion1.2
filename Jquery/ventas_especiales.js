@@ -15,8 +15,7 @@ $(document).ready(function() {
           detalle.find('.close').click(function() {
             $(".aside-container").empty();
           });
-        });
-  
+        });  
         $("#ventas_es").append(card);
       });
     });
