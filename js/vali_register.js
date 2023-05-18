@@ -1,76 +1,81 @@
-function valiRegister() {
-    var nombre = document.getElementById('nombre');
-    var pass = document.getElementById('password');
-    var correo = document.getElementById('correo');
-    var sexoSeleccionado = document.getElementById('sexo').value;
-    var numeroInput = document.getElementById('numero');
+function validateForm() {
+    const form = document.querySelector('.needs-validation');
+    if (form.checkValidity() === false) {
+    event.preventDefault();
+    event.stopPropagation();
+    } else {
+    window.location.href = "index.html";
+    }
+    form.classList.add('was-validated');
+    }
 
-    var error_nombre = document.getElementById('error_name');
-    var error_pass = document.getElementById('error_password');
-    var error_correo = document.getElementById('error_correo');
-    var errorNumero = document.getElementById('error_numero');
-    var errorSexo = document.getElementById("error_sexo");
 
-    error_correo.style.color = 'red';
-    error_pass.style.color = 'red';
-    error_nombre.style.color = 'red';
-    errorNumero.style.color = 'red';
-    errorSexo.style.color = 'red';
+function validateRut(rut) {
+    rut = rut.replace(/[^0-9kK]+/g, '').toUpperCase();
+    if (rut.length < 2) return false;
+    let digits = [...rut];
+    const verifier = digits.pop();
+    let sum = 0;
+    let multiplier = 2;
+    for (let i = digits.length - 1; i >= 0; i--) {
+        sum += digits[i] * multiplier;
+        multiplier = (multiplier + 1) % 8 || 2;
+    }
+    const expectedVerifier = '0' + (11 - sum % 11);
+    return verifier === expectedVerifier.slice(-1);
+}
+
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function validateAddress(address) {
+    const addressRegex = /^.*\d{3,}.*$/;
+    return addressRegex.test(address);
+}
+
+function validatePostalCode(postalCode) {
+    const postalCodeRegex = /^[0-9]{7}$/;
+    return postalCodeRegex.test(postalCode);
+}
+
+const rutInput = document.getElementById('validationCustom02');
+rutInput.addEventListener('input', () => {
+    const isValid = validateRut(rutInput.value);
+    rutInput.setCustomValidity(isValid ? '' : 'Rut inválido');
+});
+
+const emailInput = document.getElementById('validationCustomUsername');
+emailInput.addEventListener('input', () => {
+    const isValid = validateEmail(emailInput.value);
+    emailInput.setCustomValidity(isValid ? '' : 'Correo inválido');
+});
+
+const addressInput = document.getElementById('validationCustom03');
+addressInput.addEventListener('input', () => {
+    const isValid = validateAddress(addressInput.value);
+    addressInput.setCustomValidity(isValid ? '' : 'Dirección inválida. Asegúrate de ingresar una dirección válida en Chile.');
+});
+
+const postalCodeInput = document.getElementById('validationCustom05');
+postalCodeInput.addEventListener('input', () => {
+    const isValid = validatePostalCode(postalCodeInput.value);
+    postalCodeInput.setCustomValidity(isValid ? '' : 'Código postal inválido en Chile. El formato debe ser de 7 dígitos.');
+});
+
+function validateForm() {
+    var passwordInput = document.getElementById("validationCustom06");
+    var passwordValidation = document.getElementById("passwordValidation");
     
-    var campos_vacios = [];
-
-    if(nombre.value.trim() === '') {
-        error_nombre.innerHTML = 'El nombre es obligatorio';
-        campos_vacios.push('nombre');
+    // Verificar la longitud mínima de la contraseña
+    if (passwordInput.value.length < 6) {
+        passwordValidation.textContent = "La contraseña debe tener al menos 6 caracteres.";
+        passwordInput.classList.add("is-invalid");
+        passwordInput.classList.remove("is-valid");
     } else {
-        error_nombre.innerHTML = '';
-    }
-
-    if(pass.value.trim() === '') {
-        error_pass.innerHTML = 'La contraseña es obligatoria';
-        campos_vacios.push('password');
-    } else if(pass.value.length < 8) {
-        error_pass.innerHTML = 'La contraseña debe tener al menos 8 caracteres';
-        campos_vacios.push('password');
-    } else {
-        error_pass.innerHTML = '';
-    }
-
-    const emailRegex = /\S+@\S+\.\S+/;
-    if(correo.value.trim() === '') {
-        error_correo.innerHTML = 'El correo electrónico es obligatorio';
-        campos_vacios.push('correo');
-    } else if(!emailRegex.test(correo.value)) {
-        error_correo.innerHTML = 'El correo electrónico no es válido';
-        campos_vacios.push('correo');
-    } else {
-        error_correo.innerHTML = '';
-    }
-
-    if (sexoSeleccionado === '') {
-        errorSexo.innerHTML = 'Por favor, seleccione una opción en el campo de sexo';
-        campos_vacios.push('sexo');
-      } else {
-        errorSexo.innerHTML = '';
-    }
-
-    if(numeroInput.value === '') {
-        errorNumero.innerHTML = 'El número es obligatorio';
-        campos_vacios.push('numero');
-    } else if(isNaN(numeroInput.value)) {
-        errorNumero.innerHTML = 'Solo se permiten números';
-        campos_vacios.push('numero');
-    } else if(numeroInput.value.length !== 11) {
-        errorNumero.innerHTML = 'El número debe tener 11 dígitos sin considerar el \"+\"';
-        campos_vacios.push('numero');
-    } else {
-        errorNumero.innerHTML = '';
-    }
-
-    if(campos_vacios.length > 0) {
-        alert('Falta completar campos obligatorios: ' + campos_vacios.join(', '));
-        return false;
-    } else {
-        return true;
+        passwordValidation.textContent = "";
+        passwordInput.classList.remove("is-invalid");
+        passwordInput.classList.add("is-valid");
     }
 }
