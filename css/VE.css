@@ -1,112 +1,18 @@
-body{
-    display: block;
+.body_ve {
+  position: relative;
+  top: 100px; 
+  margin-bottom: 10%;
 }
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 15%;
-    height: 15%;
-    padding: 3%;
-  }
-  
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  .container {
-    padding: 2px 16px;
-  }
-  img{
-    width: 100%;
-  }
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-  }
-  
-  img {
-    border-radius: 5px 5px 0 0;
-  }
+@media (min-width: 576px) {
+}
 
-  .wrapper {
+@media (max-width: 575px) {
+  #container {
     display: flex;
-  }
-
-  .card-container {
-    width: 70%;
-    margin-right: 20px;
-  }
-
-  .aside-container {
-      position: fixed;
-      top: 0;
-      right: 0;
-      max-width: 80%; /* Ancho del aside */
-      min-width: 40%;
-      height: 100%; /* Altura del aside */
-      background-color: #f2f2f2;
-      padding: 20px;
-      box-sizing: border-box;
-      overflow-y: scroll;
-  }
-
-  .close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+    flex-wrap: wrap;
   }
   
-  @media screen and (min-width: 500px) {
-  body {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-    padding: 3%;
-    margin-bottom: 20px;
-    align-items: center;
-  }
-
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-
-  .container {
-    padding: 2px 16px;
-  }
-
-  img {
-    width: 50%;
-    display: block;
-    border-radius: 5px 5px 0 0;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding: 2%;
-  }
-
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 5px;
-  }
-  .aside_container {
-    display: block;
-    position: static;
+  .col {
     width: 100%;
-    margin-top: 20px;
   }
 }
