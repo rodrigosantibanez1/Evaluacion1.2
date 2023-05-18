@@ -33,11 +33,6 @@ body{
     border-radius: 5px 5px 0 0;
   }
 
-  /*this css is for the details from the items*/
-  .wrapper {
-    display: flex;
-  }
-
   .card-container {
     width: 70%;
     margin-right: 20px;
