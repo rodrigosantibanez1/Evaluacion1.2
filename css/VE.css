@@ -1,6 +1,7 @@
 .body_ve {
   position: relative;
   top: 100px; 
+  margin-bottom: 10%;
 }
 @media (min-width: 576px) {
 }

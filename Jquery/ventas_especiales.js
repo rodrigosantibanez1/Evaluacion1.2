@@ -19,7 +19,7 @@ $(document).ready(function() {
                     "<div class='card-body'>"+
                       "<h5 class='card-title'>"+item.title+"</h5>"+
                       "<p class='card-text'>"+item.price+"</p>"+
-                      "<a href='#' class='btn btn-primary' id='details'>Go somewhere</a>"+
+                      "<a href='carrito.html' class='btn btn-primary' id='details'>Comprar</a>"+
                     "</div>"+
                   "</div></div>"
                  );
