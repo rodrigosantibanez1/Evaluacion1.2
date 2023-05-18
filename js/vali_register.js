@@ -7,6 +7,19 @@ function validateForm() {
     window.location.href = "index.html";
     }
     form.classList.add('was-validated');
+        var passwordInput = document.getElementById("validationCustom06");
+        var passwordValidation = document.getElementById("passwordValidation");
+    
+        // Verificar la longitud mínima de la contraseña
+        if (passwordInput.value.length < 6) {
+            passwordValidation.textContent = "La contraseña debe tener al menos 6 caracteres.";
+            passwordInput.classList.add("is-invalid");
+            passwordInput.classList.remove("is-valid");
+        } else {
+            passwordValidation.textContent = "";
+            passwordInput.classList.remove("is-invalid");
+            passwordInput.classList.add("is-valid");
+        }
     }
 
 
@@ -64,18 +77,4 @@ postalCodeInput.addEventListener('input', () => {
     postalCodeInput.setCustomValidity(isValid ? '' : 'Código postal inválido en Chile. El formato debe ser de 7 dígitos.');
 });
 
-function validateForm() {
-    var passwordInput = document.getElementById("validationCustom06");
-    var passwordValidation = document.getElementById("passwordValidation");
-    
-    // Verificar la longitud mínima de la contraseña
-    if (passwordInput.value.length < 6) {
-        passwordValidation.textContent = "La contraseña debe tener al menos 6 caracteres.";
-        passwordInput.classList.add("is-invalid");
-        passwordInput.classList.remove("is-valid");
-    } else {
-        passwordValidation.textContent = "";
-        passwordInput.classList.remove("is-invalid");
-        passwordInput.classList.add("is-valid");
-    }
-}
+
